@@ -13,25 +13,6 @@ import { profileSchema } from './validation';
 
 import './styles.css';
 
-//// nema password za oauth usere ni na klijentu ni serveru
-// validacija na serveru i error handilng na clientu
-// css i html
-//// delete user i logika da ne brise seedovane
-//// admin ruta i hoc
-// error handling login register posto je zajednicki loading i error
-//// mongo atlas i heroku deploy package json i promenljive env i config
-//// avatar staza u bazu samo fajl
-//// gitignore za placeholder avatar
-//// delete profile ruta
-
-// hendlovanje staza za slike, default avatar za izbrisane sa heroku
-// readme
-//// posle edit user treba redirect na novi username url
-
-// fore
-// za facebook more https apsolutni callback url
-// FACEBOOK_CALLBACK_URL=https://mern-boilerplate-demo.herokuapp.com/auth/facebook/callback
-// da bi prihvatio fb domen mora dole da se poklapa sa siteurl
 
 const Profile = ({
   getProfile,
@@ -101,10 +82,7 @@ const Profile = ({
     <Layout>
       <div className="profile">
         <h1>Profile page</h1>
-        <p>
-          This is the profile page. User can edit his own profile and Admin can edit any user's
-          profile. Only authenticated users can see this page.
-        </p>
+        
         {isLoading ? (
           <p>Loading...</p>
         ) : (
@@ -138,7 +116,7 @@ const Profile = ({
               </div>
               <div>
                 <button
-                  className="btn"
+                  className="btn editbtn"
                   type="button"
                   onClick={handleClickEdit}
                   disabled={!(me?.username === profile.username || me?.role === 'ADMIN')}
@@ -155,12 +133,12 @@ const Profile = ({
         {isEdit && (
           <div className="form">
             <form onSubmit={formik.handleSubmit}>
-              <div>
+              {/* <div>
                 <label>Avatar:</label>
                 <input name="image" type="file" onChange={onChange} />
                 {image && (
                   <button
-                    className="btn"
+                    className="btn editbtn"
                     onClick={() => {
                       setImage(null);
                       setAvatar(null);
@@ -170,7 +148,7 @@ const Profile = ({
                     Remove Image
                   </button>
                 )}
-              </div>
+              </div> */}
               <input name="id" type="hidden" value={formik.values.id} />
               <div className="input-div">
                 <label>Name:</label>
@@ -219,13 +197,13 @@ const Profile = ({
                   ) : null}
                 </div>
               )}
-              <button type="submit" className="btn">
+              <button type="submit" className="btn editbtn">
                 Save
               </button>
               <button
                 onClick={() => handleDeleteUser(profile.id, history)}
                 type="button"
-                className="btn"
+                className="btn deletebtn"
               >
                 Delete profile
               </button>

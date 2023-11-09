@@ -14,7 +14,7 @@ const Home = ({ auth }) => {
   return (
     <Layout>
       <div className="home-page">
-        <h1>Home page</h1>
+       
         {!auth.isAuthenticated ? (
           <div>
             <p>

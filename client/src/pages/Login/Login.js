@@ -79,11 +79,11 @@ const Login = ({ auth, history, loginUserWithEmail }) => {
           {auth.error && <p className="error">{auth.error}</p>}
           <div>
             <button
-              className="btn submit"
+              className="btn submit loginbtn"
               disabled={auth.isLoading || !formik.isValid}
               type="submit"
             >
-              Log in now
+              Log in 
             </button>
           </div>
           <div>

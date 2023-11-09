@@ -18,11 +18,8 @@ const Users = ({ getUsers, users: { users, isLoading } }) => {
   return (
     <Layout>
       <div className="users">
-        <h1>Users page</h1>
-        <p>
-          This is the Users page. Here are listed all of the users of the app. Click the avatar or
-          the username link to go to user's profile. Only authenticated users can see this page.
-        </p>
+        <h1>Users</h1>
+        
         <div className="list">
           {isLoading ? (
             <p>Loading...</p>

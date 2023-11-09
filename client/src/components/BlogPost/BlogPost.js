@@ -90,16 +90,16 @@ const Post = ({ post, auth, deleteBlogPost, editBlogPost, clearBlogPostError }) 
           <>
             {!isEdit ? (
               <>
-                <button onClick={handleClickEdit} type="button" className="btn">
+                <button onClick={handleClickEdit} type="button" className="btn editbtn">
                   Edit
                 </button>
-                <button onClick={(e) => handleDelete(e, post.id)} type="button" className="btn">
+                <button onClick={(e) => handleDelete(e, post.id)} type="button" className="btn deletebtn">
                   Delete
                 </button>
               </>
             ) : (
               <>
-                <button type="submit" className="btn" disabled={post.isLoading}>
+                <button type="submit" className="btn editbtn" disabled={post.isLoading}>
                   Submit
                 </button>
                 <button
@@ -108,7 +108,7 @@ const Post = ({ post, auth, deleteBlogPost, editBlogPost, clearBlogPostError }) 
                     clearBlogPostError(post.id);
                   }}
                   type="button"
-                  className="btn"
+                  className="btn deletebtn"
                 >
                   Cancel
                 </button>

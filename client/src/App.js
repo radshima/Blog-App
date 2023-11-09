@@ -48,7 +48,7 @@ const App = ({ logInUserWithOauth, auth, loadMe }) => {
           <Route path="/blogs" component={Blogs} />
           <Route path="/users" component={Users} />
           <Route path="/notfound" component={NotFound} />
-          <Route path="/admin" component={Admin} />
+          <Route path="/admin" component={Users} />
           <Route exact path="/:username" component={Profile} />
           <Route exact path="/" component={Home} />
           <Route component={NotFound} />

@@ -26,9 +26,9 @@ const Navbar = ({ auth, logOutUser, history }) => {
 
         {auth.isAuthenticated ? (
           <>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/users">Users</Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to={`/${auth.me.username}`}>Profile</Link>
             </li>
