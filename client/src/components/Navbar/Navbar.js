@@ -22,12 +22,8 @@ const Navbar = ({ auth, logOutUser, history }) => {
         <li className="nav-item">
           <Link to="/addpost">Create Blog Post</Link>
         </li>
-        <li className="nav-item">
-          <Link to="/blogs">Blogs</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/myblogs">My Blogs</Link>
-        </li>
+
+
         {auth.isAuthenticated ? (
           <>
             <li className="nav-item">

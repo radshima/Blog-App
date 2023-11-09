@@ -13,6 +13,7 @@
   color: white;
   display: block;
   text-align: center;
+  display: none;
 }
 
 .login .google {
@@ -29,4 +30,5 @@
 
 .login .logins {
   margin: 5px 0;
+  display: none
 }

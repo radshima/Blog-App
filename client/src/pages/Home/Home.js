@@ -34,7 +34,7 @@ const Home = ({ auth }) => {
             <p>
               Welcome <span className="name">{auth.me.name}</span>!
             </p>            
-            <BlogPostForm />
+            
           </>
         )}
         <BlogPostList />

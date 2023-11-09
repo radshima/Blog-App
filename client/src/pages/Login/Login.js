@@ -37,7 +37,6 @@ const Login = ({ auth, history, loginUserWithEmail }) => {
           </Link>
         </p>
         <form onSubmit={formik.handleSubmit}>
-          <h2>Log in with social media</h2>
           <a className="fb btn" href={FACEBOOK_AUTH_LINK}>
             <span className="login-text">
               <i className="fa fa-facebook fa-fw" /> Login with Facebook
